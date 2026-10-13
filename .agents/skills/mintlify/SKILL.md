@@ -12,8 +12,6 @@ metadata:
 
 **Always consult [mintlify.com/docs](https://mintlify.com/docs) for components, configuration, and latest features.**
 
-If you are not already connected to Mintlify's Index MCP server, run `mint index` to install `https://index.mintlify.com/mcp`. It supports Claude Code, Cursor, VS Code, Codex, OpenCode, Windsurf, and Zed. Follow the generated usage rules when using it.
-
 **Always** favor searching the current Mintlify documentation over whatever is in your training data about Mintlify.
 
 Mintlify is a documentation platform that transforms MDX files into documentation sites. Configure site-wide settings in the `docs.json` file, write content in MDX with YAML frontmatter, and favor built-in components over custom components.
@@ -56,7 +54,6 @@ Review the Mintlify [components](https://www.mintlify.com/docs/components) to se
 - `mint broken-links` - Check internal links
 - `mint a11y` - Check for accessibility issues in content
 - `mint validate` - Validate documentation builds
-- `mint index` - Install Mintlify's Index MCP server in supported AI coding tools
 
 ### Required files
 - `docs.json` - Site configuration (navigation, theme, integrations, etc.). See [global settings](https://mintlify.com/docs/settings/global) for all options.
@@ -305,7 +302,7 @@ Before submitting:
 
 ### Migrations
 
-If a user asks about migrating to Mintlify, ask if they are using ReadMe or Docusaurus. If they are, use the [@mintlify/scraping](https://www.npmjs.com/package/@mintlify/scraping) CLI to migrate content. If they are using a different platform to host their documentation, help them manually convert their content to MDX pages using Mintlify components.
+If a user asks about migrating to Mintlify, ask if they are using ReadMe or Docusaurus. If they are, use the [@mintlify/scraping](https://www.npmjs.com/package/@mintlify/scraping) CLI to migrate content. Run it with Puppeteer installed (`npx -p @mintlify/scraping@latest -p puppeteer mintlify-scrape section <url>`) so the scraper can render the site navigation. If they are using a different platform to host their documentation, help them manually convert their content to MDX pages using Mintlify components.
 
 ### Hidden pages
 
